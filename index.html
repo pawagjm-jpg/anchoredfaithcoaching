@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anchored Faith Coaching — Christian Life Coaching & Apologetics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#152a40;
+    --ink-2:#1f3a52;
+    --parchment:#efe9dd;
+    --parchment-2:#e4dcc8;
+    --gold:#b08d57;
+    --gold-deep:#8a6a3d;
+    --text-dark:#2b2a26;
+    --text-mute:#5c584d;
+    --text-light:#f4efe4;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+    --max: 1080px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    color:var(--text-dark);
+    background:var(--parchment);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:var(--ink);
+    border-bottom:1px solid rgba(244,239,228,0.12);
+  }
+  .nav-inner{
+    max-width:var(--max); margin:0 auto; padding:18px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .brand{display:flex; align-items:center; gap:12px; text-decoration:none;}
+  .brand-mark{width:34px; height:34px; flex-shrink:0;}
+  .brand-name{
+    font-family:var(--serif); font-weight:500; font-size:19px;
+    color:var(--text-light); letter-spacing:0.01em;
+  }
+  .nav-links{display:flex; gap:32px; list-style:none;}
+  .nav-links a{
+    font-size:14px; color:rgba(244,239,228,0.75); text-decoration:none;
+    font-weight:500; transition:color 0.15s;
+  }
+  .nav-links a:hover{color:var(--gold);}
+  .nav-cta{
+    background:var(--gold); color:var(--ink); font-family:var(--sans);
+    font-weight:600; font-size:14px; padding:9px 18px; border-radius:3px;
+    text-decoration:none; white-space:nowrap;
+  }
+  .nav-toggle{display:none;}
+
+  /* ---------- HERO ---------- */
+  header.hero{
+    background:var(--ink);
+    color:var(--text-light);
+    padding:96px 0 110px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-inner{
+    max-width:var(--max); margin:0 auto; padding:0 32px;
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;
+  }
+  .eyebrow{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--gold); margin-bottom:22px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{content:''; width:22px; height:1px; background:var(--gold);}
+  h1{
+    font-family:var(--serif); font-weight:500; font-size:52px; line-height:1.1;
+    letter-spacing:-0.01em; margin-bottom:26px;
+  }
+  h1 em{
+    font-style:italic; font-weight:500; color:var(--gold);
+    position:relative;
+  }
+  .hero p.lede{
+    font-size:18px; color:rgba(244,239,228,0.82); max-width:480px; margin-bottom:34px;
+  }
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--gold); color:var(--ink); font-weight:600; font-size:15px;
+    padding:14px 26px; border-radius:3px; text-decoration:none; display:inline-block;
+    transition:background 0.15s;
+  }
+  .btn-primary:hover{background:#c4a06c;}
+  .btn-ghost{
+    border:1px solid rgba(244,239,228,0.35); color:var(--text-light); font-weight:500;
+    font-size:15px; padding:13px 25px; border-radius:3px; text-decoration:none; display:inline-block;
+  }
+  .btn-ghost:hover{border-color:var(--gold); color:var(--gold);}
+
+  .hero-mark{
+    display:flex; align-items:center; justify-content:center;
+  }
+  .hero-mark svg{width:100%; max-width:280px; height:auto;}
+
+  /* ---------- FRAMING STRIP ---------- */
+  .framing{
+    background:var(--parchment-2);
+    border-bottom:1px solid rgba(43,42,38,0.08);
+    padding:34px 0;
+  }
+  .framing-inner{
+    max-width:var(--max); margin:0 auto; padding:0 32px;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:32px;
+  }
+  .framing-item{font-size:14.5px; color:var(--text-mute);}
+  .framing-item strong{
+    display:block; font-family:var(--serif); font-size:17px; font-weight:500;
+    color:var(--text-dark); margin-bottom:4px;
+  }
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:96px 0;}
+  .section-head{max-width:640px; margin-bottom:56px;}
+  .section-tag{
+    font-family:var(--mono); font-size:12px; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--gold-deep); margin-bottom:14px;
+  }
+  h2{
+    font-family:var(--serif); font-weight:500; font-size:36px; line-height:1.2;
+    margin-bottom:14px; letter-spacing:-0.01em;
+  }
+  .section-head p{color:var(--text-mute); font-size:16.5px;}
+
+  /* ---------- APPROACH (numbered like premises) ---------- */
+  .approach{background:var(--parchment);}
+  .approach-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+    background:rgba(43,42,38,0.12);
+    border:1px solid rgba(43,42,38,0.12);
+  }
+  .approach-step{
+    background:var(--parchment); padding:34px 26px;
+  }
+  .approach-num{
+    font-family:var(--mono); font-size:13px; color:var(--gold-deep);
+    margin-bottom:18px; display:block;
+  }
+  .approach-step h3{
+    font-family:var(--serif); font-weight:500; font-size:19px; margin-bottom:10px;
+  }
+  .approach-step p{font-size:14.5px; color:var(--text-mute);}
+
+  /* ---------- SERVICES ---------- */
+  .services{background:var(--ink); color:var(--text-light);}
+  .services .section-tag{color:var(--gold);}
+  .services .section-head p{color:rgba(244,239,228,0.72);}
+  .service-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:18px;
+  }
+  .service-card{
+    background:var(--ink-2); border:1px solid rgba(244,239,228,0.1);
+    border-radius:4px; padding:28px 24px; display:flex; flex-direction:column;
+  }
+  .service-card.featured{border-color:var(--gold);}
+  .service-card h3{
+    font-family:var(--serif); font-weight:500; font-size:19px; margin-bottom:8px;
+  }
+  .service-price{
+    font-family:var(--mono); font-size:15px; color:var(--gold); margin-bottom:14px;
+  }
+  .service-card p{font-size:14px; color:rgba(244,239,228,0.68); flex-grow:1; margin-bottom:18px;}
+  .service-card a{
+    font-size:13.5px; font-weight:600; color:var(--gold); text-decoration:none;
+    border-bottom:1px solid var(--gold); padding-bottom:2px; align-self:flex-start;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about{background:var(--parchment-2);}
+  .about-grid{
+    display:grid; grid-template-columns:0.8fr 1.2fr; gap:56px; align-items:center;
+  }
+  .about-photo{
+    width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:4px;
+    box-shadow:0 1px 2px rgba(21,42,64,0.15);
+  }
+  .about-body h2{margin-bottom:20px;}
+  .about-body p{color:var(--text-mute); margin-bottom:16px; font-size:16px;}
+  .about-body p strong{color:var(--text-dark);}
+  .credentials{
+    list-style:none; margin-top:22px; display:flex; flex-direction:column; gap:10px;
+  }
+  .credentials li{
+    font-size:14.5px; color:var(--text-dark); display:flex; align-items:baseline; gap:10px;
+  }
+  .credentials li::before{content:'—'; color:var(--gold-deep); font-weight:600;}
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--parchment);}
+  .faq-list{display:flex; flex-direction:column;}
+  .faq-item{
+    border-top:1px solid rgba(43,42,38,0.14); padding:26px 0;
+  }
+  .faq-list .faq-item:last-child{border-bottom:1px solid rgba(43,42,38,0.14);}
+  .faq-item h3{
+    font-family:var(--serif); font-weight:500; font-size:18px; margin-bottom:8px;
+  }
+  .faq-item p{color:var(--text-mute); font-size:15px; max-width:680px;}
+
+  /* ---------- CTA / CONTACT ---------- */
+  .cta{
+    background:var(--ink); color:var(--text-light); text-align:center;
+    padding:110px 0;
+  }
+  .cta .eyebrow{justify-content:center;}
+  .cta h2{font-size:38px; max-width:640px; margin:0 auto 18px;}
+  .cta p{color:rgba(244,239,228,0.75); max-width:480px; margin:0 auto 36px; font-size:16.5px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink); border-top:1px solid rgba(244,239,228,0.12); padding:40px 0 32px;}
+  .footer-inner{
+    display:flex; justify-content:space-between; align-items:flex-start; gap:24px; flex-wrap:wrap;
+  }
+  .footer-brand{display:flex; align-items:center; gap:10px;}
+  .footer-brand svg{width:22px; height:22px;}
+  .footer-brand span{font-family:var(--serif); color:var(--text-light); font-size:15px;}
+  .footer-note{
+    font-size:12.5px; color:rgba(244,239,228,0.45); max-width:560px; line-height:1.7;
+  }
+  .footer-note a{color:rgba(244,239,228,0.6); text-decoration:underline;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:860px){
+    .nav-links{display:none;}
+    .hero-inner{grid-template-columns:1fr; gap:40px;}
+    .hero-mark{order:-1; max-width:160px; margin:0 auto;}
+    h1{font-size:38px;}
+    .framing-inner{grid-template-columns:1fr; gap:20px;}
+    .approach-grid{grid-template-columns:1fr 1fr;}
+    .service-grid{grid-template-columns:1fr 1fr;}
+    .about-grid{grid-template-columns:1fr;}
+    .about-photo{max-width:280px; margin:0 auto;}
+    h2{font-size:29px;}
+  }
+  @media (max-width:520px){
+    .wrap, .hero-inner, .nav-inner, .framing-inner{padding-left:20px; padding-right:20px;}
+    .approach-grid, .service-grid{grid-template-columns:1fr;}
+    h1{font-size:32px;}
+    .cta h2{font-size:28px;}
+  }
+
+  :focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="120" height="120" rx="16" fill="#1f3a52"/>
+        <g stroke="#b08d57" stroke-width="6" stroke-linecap="round" fill="none">
+          <line x1="60" y1="26" x2="60" y2="94"/>
+          <line x1="40" y1="44" x2="80" y2="44"/>
+          <path d="M 38 68 A 22 22 0 0 0 82 68"/>
+          <line x1="48" y1="94" x2="72" y2="94"/>
+        </g>
+      </svg>
+      <span class="brand-name">Anchored Faith Coaching</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Book a conversation</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <p class="eyebrow">Christian life coaching &amp; apologetics</p>
+      <h1>Move from quiet doubt<br>to <em>confident, reasoned</em> faith.</h1>
+      <p class="lede">One-on-one coaching for Christians wrestling with hard questions — grounded in Scripture, honest about doubt, and practical about what to do next.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">Book a free 20-minute call</a>
+        <a href="#services" class="btn-ghost">See how coaching works</a>
+      </div>
+    </div>
+    <div class="hero-mark">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="96" fill="none" stroke="rgba(244,239,228,0.15)" stroke-width="1"/>
+        <circle cx="100" cy="100" r="72" fill="none" stroke="rgba(244,239,228,0.12)" stroke-width="1"/>
+        <g stroke="#b08d57" stroke-width="7" stroke-linecap="round" fill="none">
+          <line x1="100" y1="46" x2="100" y2="154"/>
+          <line x1="68" y1="72" x2="132" y2="72"/>
+          <path d="M 64 114 A 36 36 0 0 0 136 114"/>
+          <line x1="80" y1="154" x2="120" y2="154"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="framing">
+  <div class="framing-inner">
+    <div class="framing-item"><strong>What this is</strong>A collaborative process to work through real questions, doubts, and decisions using Scripture and sound reasoning.</div>
+    <div class="framing-item"><strong>What this isn't</strong>Not therapy, counseling, or a substitute for licensed mental health care.</div>
+    <div class="framing-item"><strong>Who it's for</strong>Anyone facing intellectual doubt, a faith transition, or a gap between belief and daily life.</div>
+  </div>
+</div>
+
+<section class="approach" id="approach">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-tag">The process</p>
+      <h2>Four steps, in this order</h2>
+      <p>Every engagement follows the same sequence — you always know where you are.</p>
+    </div>
+    <div class="approach-grid">
+      <div class="approach-step">
+        <span class="approach-num">§ I</span>
+        <h3>Listen</h3>
+        <p>A free 20-minute call to hear what's actually going on — no framework applied yet.</p>
+      </div>
+      <div class="approach-step">
+        <span class="approach-num">§ II</span>
+        <h3>Name it</h3>
+        <p>We identify the specific doubt, decision, or gap you're working through, together.</p>
+      </div>
+      <div class="approach-step">
+        <span class="approach-num">§ III</span>
+        <h3>Work it</h3>
+        <p>Scripture, apologetics, and practical coaching applied to your actual situation — not generic advice.</p>
+      </div>
+      <div class="approach-step">
+        <span class="approach-num">§ IV</span>
+        <h3>Carry it</h3>
+        <p>You leave with a clearer, more durable faith — and a plan for what's next on your own.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-tag">Services</p>
+      <h2>Choose your starting point</h2>
+      <p>Every path begins with a free conversation — no commitment required.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Single Session</h3>
+        <p class="service-price">$125</p>
+        <p>One 60-minute deep-dive on a specific question or decision. Good for a focused, one-time need.</p>
+        <a href="#contact">Book this →</a>
+      </div>
+      <div class="service-card">
+        <h3>Discovery Package</h3>
+        <p class="service-price">$400 · 3 sessions</p>
+        <p>Three sessions over six weeks, built around one defined issue you want to work all the way through.</p>
+        <a href="#contact">Book this →</a>
+      </div>
+      <div class="service-card featured">
+        <h3>Doubt to Confidence</h3>
+        <p class="service-price">$950 · 8 weeks</p>
+        <p>The signature program. Weekly 1:1 sessions moving from where you are now to a settled, reasoned faith.</p>
+        <a href="#contact">Book this →</a>
+      </div>
+      <div class="service-card">
+        <h3>Group Cohort</h3>
+        <p class="service-price">$200 · 6 weeks</p>
+        <p>A small group (4–8 people) working through common doubts together. Runs quarterly.</p>
+        <a href="#contact">Join the list →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <img class="about-photo" src="justin-wagner.jpg" alt="Justin Wagner, founder of Anchored Faith Coaching">
+    <div class="about-body">
+      <p class="section-tag">About your coach</p>
+      <h2>Justin Wagner</h2>
+      <p><strong>I've spent 18 years mentoring and coaching people — but the last two years changed how I do it.</strong> I went all in on my faith, dove head-first into the Word, and rebuilt my entire coaching model around it. I bring nearly two decades of real coaching experience together with a faith that's still fresh, still hungry, and still honest about the questions.</p>
+      <p>My faith is non-denominational and Bible-centered — Scripture as God's Word, Jesus at the center of everything, and a simple mission: helping people find and follow him. I believe faith isn't about having it all figured out; it's about showing up honest, imperfect, and willing to grow. I'm not a licensed therapist, and I'll always be upfront about where that line is.</p>
+      <ul class="credentials">
+        <li>18 years of mentoring &amp; coaching experience</li>
+        <li>Faith rooted in daily study of the Word</li>
+        <li>Non-denominational, mission-driven approach to faith</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-tag">Questions</p>
+      <h2>Before you book</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>Is this therapy or counseling?</h3>
+        <p>No. Coaching is forward-focused and faith-centered; it doesn't diagnose or treat mental health conditions. If you're working through something clinical, I'll help you find a licensed therapist alongside — or instead of — coaching.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if my doubts are pretty serious?</h3>
+        <p>That's exactly who this is for. Serious, honest doubt gets a serious, honest response — not platitudes.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do I need to belong to a specific denomination?</h3>
+        <p>No. I work from a historic, mere-Christian foundation and respect where you're starting from.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if I'm in crisis right now?</h3>
+        <p>Please contact 911 or the 988 Suicide &amp; Crisis Lifeline immediately. Coaching is not equipped to handle emergencies.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Start here</p>
+    <h2>The first conversation is free, and there's no pitch.</h2>
+    <p>20 minutes to hear what you're working through and whether this is a fit — nothing more.</p>
+    <a href="mailto:hello@anchoredfaithcoaching.com" class="btn-primary">Email to book a call</a>
+    <p style="margin-top:14px; font-size:12.5px; color:rgba(244,239,228,0.4); font-family:var(--mono);">[ hello@anchoredfaithcoaching.com — placeholder until the .com is live ]</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="120" height="120" rx="16" fill="#1f3a52"/>
+        <g stroke="#b08d57" stroke-width="6" stroke-linecap="round" fill="none">
+          <line x1="60" y1="26" x2="60" y2="94"/>
+          <line x1="40" y1="44" x2="80" y2="44"/>
+          <path d="M 38 68 A 22 22 0 0 0 82 68"/>
+          <line x1="48" y1="94" x2="72" y2="94"/>
+        </g>
+      </svg>
+      <span>Anchored Faith Coaching</span>
+    </div>
+    <p class="footer-note">Coaching is not psychotherapy, counseling, or a substitute for licensed mental health treatment, and is not a guarantee of specific outcomes. If you are in crisis, call 911 or the 988 Suicide &amp; Crisis Lifeline. See our <a href="#">informed consent &amp; terms</a> for full details.</p>
+  </div>
+</footer>
+
+</body>
+</html>
