@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family Prayer Retreats — led by Robyn Wagner | Anchored Faith Coaching</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#152a40;
+    --ink-2:#1f3a52;
+    --parchment:#efe9dd;
+    --parchment-2:#e4dcc8;
+    --gold:#b08d57;
+    --gold-deep:#8a6a3d;
+    --text-dark:#2b2a26;
+    --text-mute:#5c584d;
+    --text-light:#f4efe4;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+    --max: 1080px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    color:var(--text-dark);
+    background:var(--parchment);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
+
+  nav{position:sticky; top:0; z-index:50; background:var(--ink); border-bottom:1px solid rgba(244,239,228,0.12);}
+  .nav-inner{max-width:var(--max); margin:0 auto; padding:18px 32px; display:flex; align-items:center; justify-content:space-between;}
+  .brand{display:flex; align-items:center; gap:12px; text-decoration:none;}
+  .brand-mark{width:34px; height:34px; flex-shrink:0;}
+  .brand-name{font-family:var(--serif); font-weight:500; font-size:19px; color:var(--text-light); letter-spacing:0.01em;}
+  .nav-links{display:flex; gap:32px; list-style:none;}
+  .nav-links a{font-size:14px; color:rgba(244,239,228,0.75); text-decoration:none; font-weight:500; transition:color 0.15s;}
+  .nav-links a:hover{color:var(--gold);}
+  .nav-links a.active{color:var(--gold);}
+  .nav-cta{background:var(--gold); color:var(--ink); font-family:var(--sans); font-weight:600; font-size:14px; padding:9px 18px; border-radius:3px; text-decoration:none; white-space:nowrap;}
+
+  header.hero{background:var(--ink); color:var(--text-light); padding:96px 0 100px;}
+  .hero-inner{max-width:var(--max); margin:0 auto; padding:0 32px; display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;}
+  .eyebrow{font-family:var(--mono); font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:22px; display:flex; align-items:center; gap:10px;}
+  .eyebrow::before{content:''; width:22px; height:1px; background:var(--gold);}
+  h1{font-family:var(--serif); font-weight:500; font-size:48px; line-height:1.12; letter-spacing:-0.01em; margin-bottom:26px;}
+  h1 em{font-style:italic; font-weight:500; color:var(--gold);}
+  .hero p.lede{font-size:18px; color:rgba(244,239,228,0.82); max-width:480px; margin-bottom:34px;}
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn-primary{background:var(--gold); color:var(--ink); font-weight:600; font-size:15px; padding:14px 26px; border-radius:3px; text-decoration:none; display:inline-block; transition:background 0.15s;}
+  .btn-primary:hover{background:#c4a06c;}
+  .btn-ghost{border:1px solid rgba(244,239,228,0.35); color:var(--text-light); font-weight:500; font-size:15px; padding:13px 25px; border-radius:3px; text-decoration:none; display:inline-block;}
+  .btn-ghost:hover{border-color:var(--gold); color:var(--gold);}
+  .hero-mark{display:flex; align-items:center; justify-content:center;}
+  .hero-mark svg{width:100%; max-width:260px; height:auto;}
+
+  .framing{background:var(--parchment-2); border-bottom:1px solid rgba(43,42,38,0.08); padding:34px 0;}
+  .framing-inner{max-width:var(--max); margin:0 auto; padding:0 32px; display:grid; grid-template-columns:repeat(3,1fr); gap:32px;}
+  .framing-item{font-size:14.5px; color:var(--text-mute);}
+  .framing-item strong{display:block; font-family:var(--serif); font-size:17px; font-weight:500; color:var(--text-dark); margin-bottom:4px;}
+
+  section{padding:96px 0;}
+  .section-head{max-width:640px; margin-bottom:56px;}
+  .section-tag{font-family:var(--mono); font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold-deep); margin-bottom:14px;}
+  h2{font-family:var(--serif); font-weight:500; font-size:34px; line-height:1.2; margin-bottom:14px; letter-spacing:-0.01em;}
+  .section-head p{color:var(--text-mute); font-size:16.5px;}
+
+  .whats-included{background:var(--parchment);}
+  .included-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(43,42,38,0.12); border:1px solid rgba(43,42,38,0.12);}
+  .included-item{background:var(--parchment); padding:34px 28px;}
+  .included-item h3{font-family:var(--serif); font-weight:500; font-size:19px; margin-bottom:10px;}
+  .included-item p{font-size:14.5px; color:var(--text-mute);}
+
+  .about{background:var(--parchment-2);}
+  .about-grid{display:grid; grid-template-columns:0.8fr 1.2fr; gap:56px; align-items:center;}
+  .about-photo{width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:4px; background:var(--ink); box-shadow:0 1px 2px rgba(21,42,64,0.15);}
+  .about-photo.placeholder{display:flex; align-items:center; justify-content:center; color:rgba(244,239,228,0.4); font-family:var(--mono); font-size:13px; text-align:center; padding:20px;}
+  .about-body p{color:var(--text-mute); margin-bottom:16px; font-size:16px;}
+  .about-body p strong{color:var(--text-dark);}
+  .credentials{list-style:none; margin-top:22px; display:flex; flex-direction:column; gap:10px;}
+  .credentials li{font-size:14.5px; color:var(--text-dark); display:flex; align-items:baseline; gap:10px;}
+  .credentials li::before{content:'—'; color:var(--gold-deep); font-weight:600;}
+
+  .cta{background:var(--ink); color:var(--text-light); text-align:center; padding:110px 0;}
+  .cta .eyebrow{justify-content:center;}
+  .cta h2{font-size:36px; max-width:640px; margin:0 auto 18px;}
+  .cta p{color:rgba(244,239,228,0.75); max-width:480px; margin:0 auto 36px; font-size:16.5px;}
+  .cta .placeholder-note{margin-top:14px; font-size:12.5px; color:rgba(244,239,228,0.4); font-family:var(--mono);}
+
+  .cross-link{background:var(--parchment); text-align:center; padding:56px 0;}
+  .cross-link p{font-size:15px; color:var(--text-mute);}
+  .cross-link a{color:var(--gold-deep); font-weight:600; text-decoration:underline;}
+
+  footer{background:var(--ink); border-top:1px solid rgba(244,239,228,0.12); padding:40px 0 32px;}
+  .footer-inner{display:flex; justify-content:space-between; align-items:flex-start; gap:24px; flex-wrap:wrap;}
+  .footer-brand{display:flex; align-items:center; gap:10px;}
+  .footer-brand svg{width:22px; height:22px;}
+  .footer-brand span{font-family:var(--serif); color:var(--text-light); font-size:15px;}
+  .footer-note{font-size:12.5px; color:rgba(244,239,228,0.45); max-width:560px; line-height:1.7;}
+  .footer-note a{color:rgba(244,239,228,0.6); text-decoration:underline;}
+
+  @media (max-width:860px){
+    .nav-links{display:none;}
+    .hero-inner{grid-template-columns:1fr; gap:40px;}
+    .hero-mark{order:-1; max-width:150px; margin:0 auto;}
+    h1{font-size:36px;}
+    .framing-inner{grid-template-columns:1fr; gap:20px;}
+    .included-grid{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;}
+    .about-photo{max-width:280px; margin:0 auto;}
+    h2{font-size:27px;}
+  }
+  @media (max-width:520px){
+    .wrap, .hero-inner, .nav-inner, .framing-inner{padding-left:20px; padding-right:20px;}
+    h1{font-size:30px;}
+    .cta h2{font-size:26px;}
+  }
+  :focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <svg class="brand-mark" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="120" height="120" rx="16" fill="#1f3a52"/>
+        <g stroke="#b08d57" stroke-width="6" stroke-linecap="round" fill="none">
+          <line x1="60" y1="26" x2="60" y2="94"/>
+          <line x1="40" y1="44" x2="80" y2="44"/>
+          <path d="M 38 68 A 22 22 0 0 0 82 68"/>
+          <line x1="48" y1="94" x2="72" y2="94"/>
+        </g>
+      </svg>
+      <span class="brand-name">Anchored Faith Coaching</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Coaching</a></li>
+      <li><a href="retreats.html" class="active">Retreats</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Inquire about a retreat</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="eyebrow">Family prayer retreats</p>
+      <h1>A faith-centered weekend, <em>planned for you</em>.</h1>
+      <p class="lede">Robyn designs complete family prayer retreats — the schedule, the materials, the activities — so your family can slow down and reconnect in faith, without having to plan it yourselves.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">Inquire about a retreat</a>
+        <a href="#included" class="btn-ghost">See what's included</a>
+      </div>
+    </div>
+    <div class="hero-mark">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="90" fill="none" stroke="rgba(244,239,228,0.15)" stroke-width="1"/>
+        <circle cx="100" cy="100" r="68" fill="none" stroke="rgba(244,239,228,0.12)" stroke-width="1"/>
+        <g stroke="#b08d57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+          <path d="M 65 75 Q 100 58 135 75 L 135 128 Q 100 111 65 128 Z"/>
+          <line x1="100" y1="66" x2="100" y2="120"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="framing">
+  <div class="framing-inner">
+    <div class="framing-item"><strong>Designed, not delivered</strong>Robyn plans and maps out the full experience — you and your family lead it yourselves, at your own pace.</div>
+    <div class="framing-item"><strong>Led by Robyn</strong>Family prayer retreats grew out of Robyn leading them for her own community — this is that same experience, built for your family.</div>
+    <div class="framing-item"><strong>Who it's for</strong>Families who want intentional, unhurried time in prayer and Scripture together — no retreat-planning experience needed.</div>
+  </div>
+</div>
+
+<section class="whats-included" id="included">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-tag">What's included</p>
+      <h2>Everything you need, nothing you have to plan</h2>
+      <p>Every retreat is custom-built for your family, but generally includes:</p>
+    </div>
+    <div class="included-grid">
+      <div class="included-item">
+        <h3>A full schedule</h3>
+        <p>A day-by-day, hour-by-hour plan for the retreat, paced for families with kids of different ages.</p>
+      </div>
+      <div class="included-item">
+        <h3>Guided materials</h3>
+        <p>Prayer prompts, Scripture readings, and reflection guides your family can use without any extra prep.</p>
+      </div>
+      <div class="included-item">
+        <h3>Activities</h3>
+        <p>Hands-on, faith-centered activities that get everyone — not just the adults — actively involved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo placeholder">[ Photo of Robyn ]</div>
+    <div class="about-body">
+      <p class="section-tag">Led by</p>
+      <h2>Robyn Wagner</h2>
+      <p><strong>This started because people kept asking.</strong> Robyn has led family prayer retreats for [her own family / community / church group], and word spread — families started reaching out asking her to help plan the same kind of experience for them.</p>
+      <p>[Add 2-3 sentences here on Robyn's background, what led her to start planning these retreats, and what she's learned from leading them so far.]</p>
+      <ul class="credentials">
+        <li>[Number] family prayer retreats planned and led</li>
+        <li>[Any relevant background — ministry, event planning, hosting experience]</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap">
+    <p class="eyebrow">Start planning</p>
+    <h2>Tell Robyn a bit about your family, and she'll help you plan the retreat.</h2>
+    <p>No two families are the same — every retreat is built around yours.</p>
+    <a href="mailto:hello@anchoredfaithcoaching.com" class="btn-primary">Email to inquire</a>
+    <p class="placeholder-note">[ hello@anchoredfaithcoaching.com — placeholder until a dedicated retreats email/domain is set up ]</p>
+  </div>
+</section>
+
+<div class="cross-link">
+  <p>Looking for 1:1 faith coaching instead? <a href="index.html">Visit Justin's coaching page →</a></p>
+</div>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="120" height="120" rx="16" fill="#1f3a52"/>
+        <g stroke="#b08d57" stroke-width="6" stroke-linecap="round" fill="none">
+          <line x1="60" y1="26" x2="60" y2="94"/>
+          <line x1="40" y1="44" x2="80" y2="44"/>
+          <path d="M 38 68 A 22 22 0 0 0 82 68"/>
+          <line x1="48" y1="94" x2="72" y2="94"/>
+        </g>
+      </svg>
+      <span>Anchored Faith Coaching</span>
+    </div>
+    <p class="footer-note">These retreats are a planning and coaching resource, not psychotherapy, counseling, or a substitute for licensed mental health treatment. If you are in crisis, call 911 or the 988 Suicide &amp; Crisis Lifeline.</p>
+  </div>
+</footer>
+
+</body>
+</html>
